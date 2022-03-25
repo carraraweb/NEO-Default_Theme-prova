@@ -15,8 +15,8 @@ $('.type.example form')
         identifier  : 'phone',
         rules: [
           {
-            type   : 'minLength[10]',
-            prompt : 'Entre com um telefone válido'
+            type   : 'number',
+            prompt : 'Entre apenas com números'
           }
         ]
       }
