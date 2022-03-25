@@ -1,6 +1,6 @@
-$('.type.example form')
-  .form({
+$('#testForm form').form({
     on: 'blur',
+    inline: true,
     fields: {      
       email: {
         identifier  : 'email',
@@ -12,11 +12,11 @@ $('.type.example form')
         ]
       },
       phone: {
-        identifier  : 'phone',
+        identifier: 'phone',
         rules: [
           {
-            type   : 'number',
-            prompt : 'Entre apenas com números'
+            type: 'regExp[/(^|\()?\s*(\d{2})\s*(\s|\))*(9?\d{4})(\s|-)?(\d{4})($|\n)/u]',
+            prompt: 'Telefone inválido. (Ex: (41) 9876-5432 ou (41) 98765-4321)'
           }
         ]
       }
